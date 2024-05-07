@@ -68,4 +68,26 @@ app.get('/basic', (c) => {
   return c.text('Your are authorized! basic')
 })
 
+// 外部のAPIを叩いてみる
+app.get('/api/poke', async (c) => {
+  try {
+    const res = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu', { method: "GET" })
+    const { status, statusText } = res
+    if (status !== 200 || statusText !== 'OK') {
+      throw new Error('Error status')
+    }
+    const data = await res.json()
+    return c.json({
+      ok: true,
+      data,
+    })
+  } catch (error) {
+    console.error(error)
+    return c.json({
+      ok: false,
+      message: 'Error',
+    })
+  }
+})
+
 export default app

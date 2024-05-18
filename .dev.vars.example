@@ -1,0 +1,3 @@
+# cloudflare のダッシュボードで設定可能な環境変数をローカルで扱うための設定
+BASIC_AUTH_USER = ""
+BASIC_AUTH_PASSWORD = ""

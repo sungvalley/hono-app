@@ -90,4 +90,6 @@ app.get('/api/poke', async (c) => {
   }
 })
 
+// GithubActionsの動作確認用
+
 export default app

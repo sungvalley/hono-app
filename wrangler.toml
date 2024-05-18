@@ -1,10 +1,10 @@
 name = "hono-app"
 compatibility_date = "2023-12-01"
+main = "src/index.ts"
+minify = true
 
 [vars]
 # MY_VAR = "my-variable"
-BASIC_AUTH_USER = "admin"
-BASIC_AUTH_PASSWORD = "admin"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"

@@ -3,15 +3,9 @@ compatibility_date = "2023-12-01"
 main = "src/index.ts"
 minify = true
 
-[env.dev.vars]
-MY_VAR = "my-variable"
-DEV_VAR = ""
-
-[env.staging.vars]
-MY_VAR = "my-variable-staging"
-
-[env.production.vars]
-MY_VAR = "my-variable-production"
+[vars]
+BASIC_AUTH_USER = ""
+BASIC_AUTH_PASSWORD = ""
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
